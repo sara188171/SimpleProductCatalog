@@ -30,3 +30,4 @@ C:\Users\User\source\repos\ProductCatalogApi\ProductCatalogApi\obj\Debug\net8.0\
 C:\Users\User\source\repos\ProductCatalogApi\ProductCatalogApi\obj\Debug\net8.0\ProductCatalogApi.pdb
 C:\Users\User\source\repos\ProductCatalogApi\ProductCatalogApi\obj\Debug\net8.0\ProductCatalogApi.genruntimeconfig.cache
 C:\Users\User\source\repos\ProductCatalogApi\ProductCatalogApi\obj\Debug\net8.0\ref\ProductCatalogApi.dll
+C:\Users\User\source\repos\ProductCatalogApi\ProductCatalogApi\obj\Debug\net8.0\ProductCatalogApi.sourcelink.json

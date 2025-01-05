@@ -1,6 +1,6 @@
 ﻿using ProductCatalogApi.Data;
 
-namespace ProductCatalogApi.Services
+namespace ProductCatalogApi.BL.Services
 {
     public class ProductService : IProductService
     {

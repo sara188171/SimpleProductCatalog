@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
-using ProductCatalogApi.Services;
+using ProductCatalogApi.BL.Services;
+using ProductCatalogApi.BL.Validaitors;
 using System.Collections.Concurrent;
 
 namespace ProductCatalogApi.Controllers
@@ -10,10 +11,13 @@ namespace ProductCatalogApi.Controllers
     public class ProductsController : ControllerBase
     {
         private readonly IProductService _productService;
+        private readonly IProductValidaitor _productValidaitor;
 
-        public ProductsController(IProductService productService)
+        public ProductsController(IProductService productService, IProductValidaitor
+            productValidaitor)
         {
             _productService = productService;
+            _productValidaitor = productValidaitor;
         }
 
         [HttpGet]
@@ -33,7 +37,7 @@ namespace ProductCatalogApi.Controllers
         [HttpPost]
         public async Task<IActionResult> AddProduct([FromBody] Product newProduct)
         {
-            if (newProduct == null || string.IsNullOrWhiteSpace(newProduct.Name) || string.IsNullOrWhiteSpace(newProduct.Category) || newProduct.Price <= 0)
+            if (!_productValidaitor.CheackProductValidaitor(newProduct))
             {
                 return BadRequest("Invalid product data.");
             }

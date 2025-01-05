@@ -1,4 +1,4 @@
-﻿namespace ProductCatalogApi.Services
+﻿namespace ProductCatalogApi.BL.Services
 {
     public interface IProductService
     {

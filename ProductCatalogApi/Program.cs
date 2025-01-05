@@ -1,5 +1,7 @@
+using CorrectCode.BL.Validaitors;
+using ProductCatalogApi.BL.Services;
+using ProductCatalogApi.BL.Validaitors;
 using ProductCatalogApi.Data;
-using ProductCatalogApi.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +13,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<IProductRepository,  ProductRepository>();
+builder.Services.AddScoped<IProductValidaitor, ProductValidaitor>();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll", builder =>
